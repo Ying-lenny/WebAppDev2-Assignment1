@@ -24,12 +24,12 @@ describe("Home Page ", () => {
     cy.visit("/")
   });
   
-    // describe("Base test", () => {
-    //   it("displays page header", () => {
-    //     cy.get("h2").contains("No. Movies");
-    //     cy.get(".badge").contains(20);
-    //   });
-    // });
+    describe("Base test", () => {
+      it("displays page header", () => {
+        cy.get("h2").contains("No. Movies");
+        cy.get(".badge").contains(20);
+      });
+    });
 
     describe("Filtering", () => {
         describe("By movie title" ,() => {
@@ -64,9 +64,22 @@ describe("Home Page ", () => {
             cy.get(".card").should("have.length", matchingMovies.length);
             cy.get(".card").should('not.exist');
           })
-        })
-        describe("By movie genre" ,() => {
-          // More later
-        })
-      })
-    })
+        });
+    });
+
+        describe("By movie genre", () => {
+            it("should display movies with the specified genre only", () => {
+              const selectedGenreId = 35;
+              const selectedGenreText = "Comedy";
+              const matchingMovies = filterByGenre(movies, selectedGenreId);
+              cy.get("select").select(selectedGenreText); 
+              cy.get(".card").should("have.length", matchingMovies.length);
+              cy.get(".card").each(($card, index) => {
+                cy.wrap($card)
+                  .find(".card-title")
+                  .should("have.text", matchingMovies[index].title);
+              });      
+            });
+        });
+      
+      });
