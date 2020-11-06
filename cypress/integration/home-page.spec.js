@@ -24,13 +24,13 @@ describe("Home Page ", () => {
     cy.visit("/")
   });
   
-    describe("Base test", () => {
-      it("displays page header", () => {
-        cy.get("h2").contains("No. Movies");
-        cy.get(".badge").contains(20);
-      });
-    });
-    
+    // describe("Base test", () => {
+    //   it("displays page header", () => {
+    //     cy.get("h2").contains("No. Movies");
+    //     cy.get(".badge").contains(20);
+    //   });
+    // });
+
     describe("Filtering", () => {
         describe("By movie title" ,() => {
           it("should display movies with 'p ' in the title", () => {
@@ -44,6 +44,7 @@ describe("Home Page ", () => {
               .should("have.text", matchingMovies[index].title);
             });
           })
+
           it("should display movies with 'o' in the title", () => {
             const searchString = "o";
             const matchingMovies = filterByTitle(movies, searchString);
@@ -54,6 +55,14 @@ describe("Home Page ", () => {
               .find(".card-title")
               .should("have.text", matchingMovies[index].title);
             })
+          })
+
+          it("should check for movies with 'xyz' in the title to handle errors", () => {
+            const searchString = "xyz";
+            const matchingMovies = filterByTitle(movies, searchString);
+            cy.get("input").clear().type(searchString);
+            cy.get(".card").should("have.length", matchingMovies.length);
+            cy.get(".card").should('not.exist');
           })
         })
         describe("By movie genre" ,() => {
