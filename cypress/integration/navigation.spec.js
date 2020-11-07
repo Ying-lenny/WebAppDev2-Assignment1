@@ -29,11 +29,13 @@ describe("Navigation", () => {
     beforeEach(() => {
       cy.visit("/");
     });
+
     it("should navigate to the movie details page and change browser URL", () => {
       cy.get(".card").eq(1).find("img").click();
       cy.url().should("include", `/movies/${movies[1].id}`);
       cy.get("h2").contains(movies[1].title);
     });
+
     it("should allow navigation from site header", () => {
       cy.get("nav").find("li").eq(1).find("a").click();
       cy.url().should("include", `/favorites`);
@@ -48,4 +50,23 @@ describe("Navigation", () => {
     });
   });
 
+  describe("From the Movie Details page ", () => {
+    beforeEach(() => {
+      cy.visit(`/movies/${movieId}`);
+    });
+
+    it("should change browser URL when show/hide reviews is clicked", () => {
+      cy.contains("Show Reviews").click();
+      cy.url().should("include", `/movies/${movieId}/reviews`);
+      cy.contains("Hide Reviews").click();
+      cy.url().should("not.include", `/movies/${movieId}/reviews`);
+    });
+
+    it("should change browser URL when show/hide reviews is clicked", () => {
+        cy.contains("Show Reviews").click();
+        cy.url().should("include", `/movies/${movieId}/reviews`);
+        cy.get("tbody").find("a").eq(0).click();
+        cy.url().should("include", `/reviews/`);
+      });
+    });
 });
