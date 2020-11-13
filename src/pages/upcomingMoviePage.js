@@ -1,20 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useContext } from "react";
+import PageTemplate from '../components/templateMovieListPage'
+import {MoviesContext} from '../contexts/moviesContext'
 import AddToFavoritesButton from '../components/buttons/addToFavorites'
-import PageTemplate from "../components/templateMovieListPage";
-import {upcoming} from "../api/tmdb-api";
 
 const UpcomingMoviePage = () => {
-    const [movies, setMovies] = useState([]);
-    useEffect(() => {
-      upcoming().then(movies => {
-        setMovies(movies);
-      });
-    }, []);
+  const context = useContext(MoviesContext);
+  const upcoming = context.upcoming.filter((m) => {  // New
+    return !("favorite" in m);
+  });
   
     return (
         <PageTemplate
           title='Upcoming Movies'
-          movies={movies}
+          movies={upcoming}
           action={(movie) => {
             return <AddToFavoritesButton movie={movie} />;
           }}
