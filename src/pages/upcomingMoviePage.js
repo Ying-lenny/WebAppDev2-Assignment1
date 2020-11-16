@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
 import PageTemplate from '../components/templateMovieListPage'
 import {MoviesContext} from '../contexts/moviesContext'
-import AddToFavoritesButton from '../components/buttons/addToFavorites'
+import AddToWishlistButton from '../components/buttons/addToWishlist'
 
 const UpcomingMoviePage = () => {
   const context = useContext(MoviesContext);
   const upcoming = context.upcoming.filter((m) => {  // New
-    return !("favorite" in m);
+    return !("wishlist" in m);
   });
   
     return (
@@ -14,7 +14,7 @@ const UpcomingMoviePage = () => {
           title='Upcoming Movies'
           movies={upcoming}
           action={(movie) => {
-            return <AddToFavoritesButton movie={movie} />;
+            return <AddToWishlistButton movie={movie} />;
           }}
         />
     );
