@@ -5,14 +5,14 @@ import AddToWishlistButton from '../components/buttons/addToWishlist'
 
 const UpcomingMoviePage = () => {
   const context = useContext(MoviesContext);
-  const upcoming = context.upcoming.filter((m) => {  // New
+  const movies = context.upcoming.filter((m) => {  // New
     return !("wishlist" in m);
   });
   
     return (
         <PageTemplate
           title='Upcoming Movies'
-          movies={upcoming}
+          movies={movies}
           action={(movie) => {
             return <AddToWishlistButton movie={movie} />;
           }}
