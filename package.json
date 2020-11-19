@@ -17,6 +17,7 @@
   "scripts": {
     "storybook": "start-storybook -s ./public -p 6006 -c ./.storybook",
     "start": "react-scripts start",
+    "start:ci": "start-server-and-test 'http-server ./build  -p 3000' 3000 'cypress run --browser chrome '",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -33,6 +34,7 @@
   "devDependencies": {
     "@storybook/addon-actions": "^5.3.1",
     "@storybook/react": "^5.3.1",
-    "babel-loader": "^8.0.6"
+    "babel-loader": "^8.0.6",
+    "start-server-and-test": "^1.10.6"
   }
 }

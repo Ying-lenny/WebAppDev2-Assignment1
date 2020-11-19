@@ -7,8 +7,12 @@ stages:
   - build
   - test
 
-# Jobs 
+variables:
+   npm_config_cache: "$CI_PROJECT_DIR/.npm"
+   CYPRESS_CACHE_FOLDER: "$CI_PROJECT_DIR/cache/Cypress"
+   CYPRESS_TMDB_KEY: "36891b61beb5f23c2daf986c17283ff4"
 
+# Jobs 
 install_dependencies:
   stage: install
   script:
@@ -21,3 +25,5 @@ bundle_app:
   stage: build
   script:
     - npm run build
+
+    "start:ci": "start-server-and-test 'http-server ./build  -p 3000' 3000 'cypress run --browser chrome '"
