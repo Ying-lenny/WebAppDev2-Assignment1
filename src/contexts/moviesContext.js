@@ -76,7 +76,7 @@ const MoviesContextProvider = (props) => {
         movies: state.movies,
         upcoming: state.upcoming,
         addToFavorites: addToFavorites,
-        addToWishlist, addToWishlist,
+        addToWishlist: addToWishlist,
         addReview: addReview,
       }}
     >
