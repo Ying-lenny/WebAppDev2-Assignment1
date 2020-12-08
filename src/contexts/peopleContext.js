@@ -6,7 +6,7 @@ export const PeopleContext = createContext(null);
 const reducer = (state, action) => {
     switch (action.type) {
       case "load-popular":
-        return { popular: action.payload.people};
+        return { popular: action.payload.popular};
       default:
         return state;
     }
@@ -16,8 +16,8 @@ const reducer = (state, action) => {
     const [state, dispatch] = useReducer(reducer, { popular: [] });
 
     useEffect(() => {
-      getPeople().then((people) => {
-        dispatch({ type: "load-popular", payload: { people } });
+      getPeople().then((popular) => {
+        dispatch({ type: "load-popular", payload: { popular } });
       });
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);

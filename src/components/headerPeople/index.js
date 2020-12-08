@@ -2,7 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { withRouter } from "react-router-dom";
 
-const PeopleHeader = ({ people, history }) => {
+const PeopleHeader = ({ person, history }) => {
   return (
     <div className="row">
              <div className="col-2">
@@ -13,7 +13,7 @@ const PeopleHeader = ({ people, history }) => {
         </div>
       <div className="col-6 offset-3">
         <h2>
-          {people.title}
+          {person.title}
           {"  "}
         </h2>
       </div>

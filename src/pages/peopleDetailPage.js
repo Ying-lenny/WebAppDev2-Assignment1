@@ -1,20 +1,25 @@
-/* eslint-disable react-hooks/rules-of-hooks */
-import React, { useContext } from "react";
-import PageTemplate from '../components/templatePeoplePage';
-import {PeopleContext} from '../contexts/peopelContext';
+import React from "react";
+import {withRouter } from "react-router-dom";
+import PeopleDetails from "../components/peopleDetails";
+import PageTemplate from "../components/templatePeoplePage";
+import usePerson from "../hooks/usePeople";
 
-const peopleDetailPage = () => {
-    const context = useContext(PeopleContext);
-    const people = context.popular.filter((m) => {  // New
-      return !("popular" in m);
-    });
-    
-      return (
-          <PageTemplate
-            title='Popular People'
-            people={people}
-          />
-      );
-    };
-  
-  export default peopleDetailPage;
+const MoviePage = props => {
+  const { id } = props.match.params;
+  const [person] = usePerson(id)  // NEW
+  return (
+    <>
+    {person ? (
+      <>
+        <PageTemplate person={person}>
+          <PeopleDetails person={person} />
+        </PageTemplate>
+      </>
+    ) : (
+      <p>Waiting for Person details puh-leease</p>
+    )}
+  </>
+  );
+};
+
+export default withRouter(MoviePage);
