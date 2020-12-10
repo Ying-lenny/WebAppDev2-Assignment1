@@ -13,8 +13,11 @@ const PeopleHeader = ({ person, history }) => {
         </div>
       <div className="col-6 offset-3">
         <h2>
-          {person.title}
+          {person.name}
           {"  "}
+          <a href={person.homepage}>
+            <FontAwesomeIcon icon={["fas", "home"]} size="1x" />
+          </a>
         </h2>
       </div>
     </div>

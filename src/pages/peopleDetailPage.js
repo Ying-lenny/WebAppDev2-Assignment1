@@ -4,7 +4,7 @@ import PeopleDetails from "../components/peopleDetails";
 import PageTemplate from "../components/templatePeoplePage";
 import usePerson from "../hooks/usePeople";
 
-const MoviePage = props => {
+const PersonPage = props => {
   const { id } = props.match.params;
   const [person] = usePerson(id)  // NEW
   return (
@@ -22,4 +22,4 @@ const MoviePage = props => {
   );
 };
 
-export default withRouter(MoviePage);
+export default withRouter(PersonPage);
