@@ -6,6 +6,9 @@ import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import HomePage from "./pages/homePage";
 import MoviePage from './pages/movieDetailsPage'
 import FavoriteMoviesPage from './pages/favoritesMoviesPage'       // NEW
+
+import WishlistMoviesPage from './pages/wishlistMoviesPage' 
+
 import MovieReviewPage from "./pages/movieReviewPage";
 import SiteHeader from './components/siteHeader'
 import UpcomingMoviePage from './pages/upcomingMoviePage'
@@ -29,6 +32,9 @@ const App = () => {
             <PeopleContextProvider>
               <Switch>
                 <Route exact path="/movies/favorites" component={FavoriteMoviesPage} />
+
+                <Route exact path="/movies/wishlist" component={WishlistMoviesPage} />
+
                 <Route exact path="/reviews/form" component={AddMovieReviewPage} />
                 <Route exact path="/movies/upcoming" component={UpcomingMoviePage} />
                 <Route exact path="/person/popular" component={PeopleListPage} />
