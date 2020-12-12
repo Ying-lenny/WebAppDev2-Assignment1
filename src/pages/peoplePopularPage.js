@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import Pagetemplate from "../components/templatePeopleListPage";
 import {PeopleContext} from '../contexts/peopleContext'
 
-const peopleListPage = () => {
+const peoplePopularPage = () => {
   const context = useContext(PeopleContext);
   const popular = context.popular.filter( m => m.name )
 
@@ -15,4 +15,4 @@ const peopleListPage = () => {
   );
 };
 
-export default peopleListPage;
+export default peoplePopularPage;

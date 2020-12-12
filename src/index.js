@@ -17,7 +17,7 @@ import AddMovieReviewPage from './pages/addMovieReviewPage';
 //People Page
 import PersonPage from './pages/peopleDetailPage';
 import PeopleContextProvider from "./contexts/peopleContext";
-import PeopleListPage from './pages/peopleListPage';
+import peoplePopularPage from './pages/peoplePopularPage';
 
 const App = () => {
   return (
@@ -35,7 +35,7 @@ const App = () => {
 
                 <Route exact path="/reviews/form" component={AddMovieReviewPage} />
                 <Route exact path="/movies/upcoming" component={UpcomingMoviePage} />
-                <Route exact path="/person/popular" component={PeopleListPage} />
+                <Route exact path="/person/popular" component={peoplePopularPage} />
                 <Route path="/reviews/:id" component={MovieReviewPage} />
                 <Route path="/movies/:id" component={MoviePage} />
                 <Route path="/person/:id" component={PersonPage} />

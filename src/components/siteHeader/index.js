@@ -30,35 +30,23 @@ const SiteHeader = () => {
       />
       <nav className="navbar navbar-expand ">
         <ul className="navbar-nav">
-          <li className="nav-item">
-            <Link className="nav-link text-white" to="/">
-              Home
-            </Link>
-          </li>
-
-          <Dropdown as={ButtonGroup}>
+          <Dropdown className="btn-header" as={ButtonGroup}>
           <Button as={Link} to="/" variant="success">Movies</Button>
           <Dropdown.Toggle split variant="success" id="dropdown-split-basic" />
           <Dropdown.Menu>
+            <Dropdown.Item as={Link} to="/movies/upcoming">Upcoming</Dropdown.Item>
             <Dropdown.Item as={Link} to="/movies/favorites">Favorites</Dropdown.Item>
             <Dropdown.Item as={Link} to="/movies/wishlist">Wishlist</Dropdown.Item>
-            <Dropdown.Item as={Link} to="/movies/upcoming">Upcoming</Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
 
-        <Dropdown as={ButtonGroup}>
+        <Dropdown className="btn-header"as={ButtonGroup}>
           <Button as={Link} to="/person/popular" variant="success">People</Button>
           <Dropdown.Toggle split variant="success" id="dropdown-split-basic" />
           <Dropdown.Menu>
             <Dropdown.Item as={Link} to="/person/popular">Popular</Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
-
-          <li className="nav-item">
-                  <Link className="nav-link text-white" to="/person/popular">
-                    Popular
-                  </Link>
-              </li>
         </ul>
       </nav>
     </nav>
