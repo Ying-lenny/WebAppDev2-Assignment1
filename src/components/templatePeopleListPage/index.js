@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../headerPeopleList";
 import PeopleList from "../peopleList";
 
-const PeopleListPageTemplate = ({ popular, name }) => {
+const PeopleListPageTemplate = ({ popular, title}) => {
   let displayedPeople = popular
     .filter(m => {
       return m.name.toLowerCase()!== -1;
@@ -10,7 +10,7 @@ const PeopleListPageTemplate = ({ popular, name }) => {
 
   return (
     <>
-      <Header name={name} numPeople={displayedPeople.length} />
+      <Header title={title} numPeople={displayedPeople.length} />
       <PeopleList
        popular={displayedPeople}
     />

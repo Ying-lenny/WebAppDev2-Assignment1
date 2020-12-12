@@ -9,7 +9,7 @@ const peopleListPage = () => {
 
   return (
     <Pagetemplate
-      title="Discover Movies"
+      title={"Popular People"}
       popular={popular}  /* Changed */
     />
   );

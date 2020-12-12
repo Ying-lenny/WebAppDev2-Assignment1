@@ -1,4 +1,7 @@
 import React from "react";
+import Dropdown from 'react-bootstrap/Dropdown'
+import Button from 'react-bootstrap/Button'
+import ButtonGroup from 'react-bootstrap/Button'
 import { Link } from "react-router-dom";
 import "../../globals/fontawesome";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -32,26 +35,25 @@ const SiteHeader = () => {
               Home
             </Link>
           </li>
-          <div class="dropdown">
-            <button class="dropbtn">Movies</button>
-              <div class="dropdown-content">
-              <li className="nav-item">
-                  <Link className="nav-link text-white" to="/movies/upcoming">
-                    Upcoming
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link text-white" to="/movies/favorites">
-                    Favorites
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link text-white" to="/movies/wishlist">
-                    Wishlist
-                  </Link>
-                </li>
-            </div>
-          </div>
+
+          <Dropdown as={ButtonGroup}>
+          <Button as={Link} to="/" variant="success">Movies</Button>
+          <Dropdown.Toggle split variant="success" id="dropdown-split-basic" />
+          <Dropdown.Menu>
+            <Dropdown.Item as={Link} to="/movies/favorites">Favorites</Dropdown.Item>
+            <Dropdown.Item as={Link} to="/movies/wishlist">Wishlist</Dropdown.Item>
+            <Dropdown.Item as={Link} to="/movies/upcoming">Upcoming</Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
+
+        <Dropdown as={ButtonGroup}>
+          <Button as={Link} to="/person/popular" variant="success">People</Button>
+          <Dropdown.Toggle split variant="success" id="dropdown-split-basic" />
+          <Dropdown.Menu>
+            <Dropdown.Item as={Link} to="/person/popular">Popular</Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
+
           <li className="nav-item">
                   <Link className="nav-link text-white" to="/person/popular">
                     Popular

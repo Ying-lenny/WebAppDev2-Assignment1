@@ -6,9 +6,7 @@ import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import HomePage from "./pages/homePage";
 import MoviePage from './pages/movieDetailsPage'
 import FavoriteMoviesPage from './pages/favoritesMoviesPage'       // NEW
-
 import WishlistMoviesPage from './pages/wishlistMoviesPage' 
-
 import MovieReviewPage from "./pages/movieReviewPage";
 import SiteHeader from './components/siteHeader'
 import UpcomingMoviePage from './pages/upcomingMoviePage'
