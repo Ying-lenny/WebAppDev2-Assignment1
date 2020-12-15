@@ -27,6 +27,10 @@ describe("Navigation", () => {
       });
   });
 
+  beforeEach(() => {
+    cy.visit("/");
+  });
+
   describe("From the home page", () => {
     beforeEach(() => {
       cy.visit("/");
@@ -82,6 +86,7 @@ describe("Navigation", () => {
   describe("From the Movie Details page ", () => {
     beforeEach(() => {
       cy.visit(`/movies/${movieId}`);
+      cy.wait(2000)
     });
 
     it("should change browser URL when show/hide reviews is clicked", () => {
