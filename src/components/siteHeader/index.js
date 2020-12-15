@@ -41,10 +41,11 @@ const SiteHeader = () => {
         </Dropdown>
 
         <Dropdown className="btn-header"as={ButtonGroup}>
-          <Button as={Link} to="/person/popular" variant="success">People</Button>
+          <Button as={Link} to="/person/popular" variant="success">Actors</Button>
           <Dropdown.Toggle split variant="success" id="dropdown-split-basic" />
           <Dropdown.Menu>
             <Dropdown.Item as={Link} to="/person/popular">Popular</Dropdown.Item>
+            <Dropdown.Item as={Link} to="/person/interest">People of Interest</Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
         </ul>

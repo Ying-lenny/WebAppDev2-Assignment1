@@ -5,6 +5,13 @@ export const PeopleContext = createContext(null);
 
 const reducer = (state, action) => {
     switch (action.type) {
+      case "add-interest":
+      return {
+        popular: state.popular.map((m) =>
+          m.id === action.payload.person.id ? { ...m, interest: true } : m
+        ),
+      };
+
       case "load-popular":
         return { popular: action.payload.popular};
       default:
@@ -14,6 +21,11 @@ const reducer = (state, action) => {
 
   const PeopleContextProvider = (props) => {
     const [state, dispatch] = useReducer(reducer, { popular: [] });
+
+    const addToInterest = (personId) => {
+      const index = state.popular.map((m) => m.id).indexOf(personId);
+      dispatch({ type: "add-interest", payload: { person: state.popular[index] } });
+    };
 
     useEffect(() => {
       getPeople().then((popular) => {
@@ -25,7 +37,8 @@ const reducer = (state, action) => {
     return (
       <PeopleContext.Provider
         value={{
-          popular: state.popular
+          popular: state.popular,
+          addToInterest: addToInterest
         }}
       >
         {props.children}

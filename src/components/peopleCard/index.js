@@ -4,7 +4,7 @@ import "./peopleCard.css";
 import "../../globals/fontawesome";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const PeopleCard = ({person}) => {
+const PeopleCard = ({person, action}) => {
 
   return (
     <div className="col-sm-3">
@@ -30,6 +30,9 @@ const PeopleCard = ({person}) => {
             <FontAwesomeIcon icon={["fas", "star"]} />
             <span> {person.popularity}</span>
           </p>
+        </div>
+        <div className="card-footer">
+           {action(person)}
         </div>
       </div>
     </div>
