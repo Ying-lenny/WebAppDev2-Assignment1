@@ -34,7 +34,8 @@ const SiteHeader = () => {
           <Button as={Link} to="/" variant="success">Movies</Button>
           <Dropdown.Toggle split variant="success" id="dropdown-split-basic" />
           <Dropdown.Menu>
-            <Dropdown.Item as={Link} to="/movies/upcoming">Upcoming</Dropdown.Item>
+            <Dropdown.Item as={Link} to="/">Popular Movies</Dropdown.Item>
+            <Dropdown.Item as={Link} to="/movies/upcoming">Upcoming Movies</Dropdown.Item>
             <Dropdown.Item as={Link} to="/movies/favorites">Favorites</Dropdown.Item>
             <Dropdown.Item as={Link} to="/movies/wishlist">Wishlist</Dropdown.Item>
           </Dropdown.Menu>
@@ -42,10 +43,12 @@ const SiteHeader = () => {
 
         <Dropdown className="btn-header"as={ButtonGroup}>
           <Button as={Link} to="/person/popular" variant="success">Actors</Button>
-          <Dropdown.Toggle split variant="success" id="dropdown-split-basic" />
+          <Dropdown.Toggle split variant="success" id="dropdown-split-basic2" />
           <Dropdown.Menu>
-            <Dropdown.Item as={Link} to="/person/popular">Popular</Dropdown.Item>
-            <Dropdown.Item as={Link} to="/person/interest">People of Interest</Dropdown.Item>
+            <Dropdown.Item as={Link} to="/person/popular">Popular Actors</Dropdown.Item>
+            <Dropdown.Item as={Link} to="/person/latest">Latest Actors</Dropdown.Item>
+            <Dropdown.Item as={Link} to="/person/interest">Actors of Interest</Dropdown.Item>
+            <Dropdown.Item as={Link} to="/person/newcomers">Up and coming Actors</Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
         </ul>

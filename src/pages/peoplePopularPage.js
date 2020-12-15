@@ -1,8 +1,8 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import React, { useContext } from "react";
 import Pagetemplate from "../components/templatePeopleListPage";
-import {PeopleContext} from '../contexts/peopleContext'
-import AddToInterestButton from '../components/buttons/addToInterest'
+import {PeopleContext} from '../contexts/peopleContext';
+import AddToInterestButton from '../components/buttons/addToInterest';
 
 const peoplePopularPage = () => {
   const context = useContext(PeopleContext);
@@ -11,7 +11,7 @@ const peoplePopularPage = () => {
   });
   return (
     <Pagetemplate
-      title={"Popular People"}
+      title={"Popular Actors"}
       popular={popular}  /* Changed */
       action={(person) => {
         return <AddToInterestButton person={person} />;

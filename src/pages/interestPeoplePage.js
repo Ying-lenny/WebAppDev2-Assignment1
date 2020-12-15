@@ -1,7 +1,7 @@
 import React, {useContext} from "react";
 import PeopleListPageTemplate from "../components/templatePeopleListPage";
-import {PeopleContext} from '../contexts/peopleContext'
-import AddToInterestButton from '../components/buttons/addToInterest'
+import {PeopleContext} from '../contexts/peopleContext';
+import AddToInterestButton from '../components/buttons/addToInterest';
 
 const InterestPeoplePage = () => {
   const context = useContext(PeopleContext);
