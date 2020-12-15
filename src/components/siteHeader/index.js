@@ -1,4 +1,7 @@
 import React from "react";
+import Dropdown from 'react-bootstrap/Dropdown'
+import Button from 'react-bootstrap/Button'
+import ButtonGroup from 'react-bootstrap/Button'
 import { Link } from "react-router-dom";
 import "../../globals/fontawesome";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -27,21 +30,27 @@ const SiteHeader = () => {
       />
       <nav className="navbar navbar-expand ">
         <ul className="navbar-nav">
-          <li className="nav-item">
-            <Link className="nav-link text-white" to="/">
-              Home
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link text-white" to="/movies/favorites">
-              Favorites
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link text-white" to="/movies/upcoming">
-              Upcoming
-            </Link>
-          </li>
+          <Dropdown className="btn-header" as={ButtonGroup}>
+          <Button as={Link} to="/" variant="success">Movies</Button>
+          <Dropdown.Toggle split variant="success" id="dropdown-split-basic" />
+          <Dropdown.Menu>
+            <Dropdown.Item as={Link} to="/">Popular Movies</Dropdown.Item>
+            <Dropdown.Item as={Link} to="/movies/upcoming">Upcoming Movies</Dropdown.Item>
+            <Dropdown.Item as={Link} to="/movies/favorites">Favorites</Dropdown.Item>
+            <Dropdown.Item as={Link} to="/movies/wishlist">Wishlist</Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
+
+        <Dropdown className="btn-header"as={ButtonGroup}>
+          <Button as={Link} to="/person/popular" variant="success">Actors</Button>
+          <Dropdown.Toggle split variant="success" id="dropdown-split-basic2" />
+          <Dropdown.Menu>
+            <Dropdown.Item as={Link} to="/person/popular">Popular Actors</Dropdown.Item>
+            <Dropdown.Item as={Link} to="/person/latest">Latest Actors</Dropdown.Item>
+            <Dropdown.Item as={Link} to="/person/interest">Actors of Interest</Dropdown.Item>
+            <Dropdown.Item as={Link} to="/person/newcomers">Up and coming Actors</Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
         </ul>
       </nav>
     </nav>

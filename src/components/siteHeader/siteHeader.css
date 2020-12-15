@@ -2,3 +2,13 @@
     padding-top: 0px;
     padding-bottom: 0px;
 }
+
+.btn-header {
+    background-color: #343A40;
+    border-color: #343A40;
+}
+
+.btn-header:hover {
+    background-color: #343A40;
+    border-color: #343A40;
+}
