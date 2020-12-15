@@ -21,9 +21,16 @@ describe("Home Page ", () => {
         movies = response.results
       })
   })
+
   beforeEach(() => {
     cy.visit("/")
   });
+
+  describe("Home Page ", () => {
+    beforeEach(() => {
+      cy.visit("/")
+    });
+  })
   
     describe("Base test", () => {
       it("displays page header", () => {
