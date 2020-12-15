@@ -85,6 +85,7 @@ describe("Navigation", () => {
 
   describe("From the Movie Details page ", () => {
     beforeEach(() => {
+      cy.visit("/");
       cy.visit(`/movies/${movieId}`);
       cy.wait(2000)
     });
