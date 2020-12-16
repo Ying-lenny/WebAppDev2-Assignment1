@@ -37,6 +37,7 @@ describe("Navigation", () => {
       cy.get(".card").eq(1).find("img").click();
       cy.wait(200)
       cy.url().should("include", `/movies/${movies[1].id}`);
+      cy.wait(200)
       cy.get("h2").contains(movies[1].title);
     });
 
@@ -123,7 +124,9 @@ describe("Navigation", () => {
         });
         it("should navigate to the movies detail page and change the browser URL", () => {
           cy.get(".card").eq(0).find("img").click();
+          cy.wait(200)
           cy.url().should("include", `/movies/${movies[0].id}`);
+          cy.wait(200)
           cy.get("h2").contains(movies[0].title);
         });
       });
@@ -136,17 +139,22 @@ describe("Navigation", () => {
 
         it("should navigate from home page to movie details and back", () => {
           cy.get(".card").eq(1).find("img").click();
+          cy.wait(200)
           cy.get("svg[data-icon=arrow-circle-left]").click();
           cy.url().should("not.include", `/movies`);
+          cy.wait(200)
           cy.get("h2").contains("Discover Movies");
         });
 
         it("should navigate from favorites page to movie details and back", () => {
             cy.get(".card").eq(0).find("button").click();
+            cy.wait(200)
             cy.get("button").contains("Movies").get("#dropdown-split-basic").click().get(".dropdown-item").contains("Favorites").click();
+            cy.wait(200)
             cy.get(".card").eq(0).find("img").click();
             cy.get("svg[data-icon=arrow-circle-left]").click();
             cy.url().should("include", `/movies/favorites`);
+            cy.wait(200)
             cy.get("h2").contains("Favorite Movies");
         });
       });

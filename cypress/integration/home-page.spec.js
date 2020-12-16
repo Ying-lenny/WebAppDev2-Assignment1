@@ -38,6 +38,7 @@ describe("Home Page ", () => {
       it("displays page header", () => {
         cy.wait(200)
         cy.get("h2").contains("Discover Movies");
+        cy.wait(200)
         cy.get(".badge").contains(20);
       });
     });
