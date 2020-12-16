@@ -83,27 +83,27 @@ describe("Navigation", () => {
   });
 });
 
-  describe("From the Movie Details page ", () => {
-    beforeEach(() => {
-      cy.visit("/");
-      cy.visit(`/movies/${movieId}`);
-      cy.wait(2000)
-    });
+  // describe("From the Movie Details page ", () => {
+  //   beforeEach(() => {
+  //     cy.visit("/");
+  //     cy.visit(`/movies/${movieId}`);
+  //     cy.wait(2000)
+  //   });
 
-    it("should change browser URL when show/hide reviews is clicked", () => {
-      cy.contains("Show Reviews").click();
-      cy.url().should("include", `/movies/${movieId}/reviews`);
-      cy.contains("Hide Reviews").click();
-      cy.url().should("not.include", `/movies/${movieId}/reviews`);
-    });
+  //   it("should change browser URL when show/hide reviews is clicked", () => {
+  //     cy.contains("Show Reviews").click();
+  //     cy.url().should("include", `/movies/${movieId}/reviews`);
+  //     cy.contains("Hide Reviews").click();
+  //     cy.url().should("not.include", `/movies/${movieId}/reviews`);
+  //   });
 
-    it("should change browser URL when show/hide reviews is clicked", () => {
-        cy.contains("Show Reviews").click();
-        cy.url().should("include", `/movies/${movieId}/reviews`);
-        cy.get("tbody").find("a").eq(0).click();
-        cy.url().should("include", `/reviews/`);
-      });
-    });
+  //   it("should change browser URL when show/hide reviews is clicked", () => {
+  //       cy.contains("Show Reviews").click();
+  //       cy.url().should("include", `/movies/${movieId}/reviews`);
+  //       cy.get("tbody").find("a").eq(0).click();
+  //       cy.url().should("include", `/reviews/`);
+  //     });
+  //   });
 
     describe("From the Favorites page", () => {
         beforeEach(() => {
