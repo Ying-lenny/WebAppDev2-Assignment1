@@ -93,7 +93,7 @@ describe("Home Page ", () => {
         //Search Actor Names
         describe("By Actor Names" ,() => {
           beforeEach(() => {
-            cy.visit("http://localhost:3000/person/popular")
+            cy.visit("/person/popular")
           });
           it("should display actors with 'p' in their name", () => {
             const searchString = 'p'
