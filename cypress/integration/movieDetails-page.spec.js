@@ -37,10 +37,12 @@ describe("Movie Details Page", () => {
   });
 
   it("should display movie title in the page header", () => {
+    cy.wait(200)
     cy.get("h2").contains(movie.title);
   });
 
   it("should display the movie's details", () => {
+    cy.wait(200)
     cy.get("h4").contains("Overview");
     cy.get("h4").next().contains(movie.overview);
     cy.get("ul")

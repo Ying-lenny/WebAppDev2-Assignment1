@@ -5,7 +5,7 @@ let popular;
 const filterByName = (peopleList, string) =>
   peopleList.filter((m) => m.name.toLowerCase().search(string) !== -1);
 
-describe("Home Page ", () => {
+describe("Home Page", () => {
   before(() => {
       //Get popular people from TMDB and store in popular variable
       cy.request(
