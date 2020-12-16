@@ -111,5 +111,16 @@ describe("Upcoming Page", () => {
                 });      
               });
             });
+
+            describe("Adding movie to wishlist", () => {
+              it("should display movies being added into the wishlist section", () => {
+                cy.get(".card").eq(0).get("button").contains("Add to Wishlist").click();
+                cy.get(".card").eq(1).get("button").contains("Add to Wishlist").click();
+                cy.get(".card").eq(2).get("button").contains("Add to Wishlist").click();
+                cy.get("button").contains("Movies").get("#dropdown-split-basic").click().get(".dropdown-item").contains("Wishlist").click();
+                cy.wait(200)
+                cy.get(".badge").contains(3);
+                });
+            });
       
       });

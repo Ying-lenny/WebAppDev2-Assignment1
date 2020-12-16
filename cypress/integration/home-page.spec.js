@@ -95,7 +95,7 @@ describe("Home Page ", () => {
             });
       
             describe("Adding movie to favourites", () => {
-              it("should display movies with the specified genre and text only", () => {
+              it("should display movies being added into the favorites section", () => {
                 cy.get(".card").eq(0).get("button").contains("Add to Favorites").click();
                 cy.get(".card").eq(1).get("button").contains("Add to Favorites").click();
                 cy.get(".card").eq(2).get("button").contains("Add to Favorites").click();

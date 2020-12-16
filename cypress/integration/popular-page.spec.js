@@ -69,5 +69,16 @@ describe("Home Page", () => {
           })
         });
     });
+
+    describe("Adding Actors to People of Interest", () => {
+      it("should display movies being added into the peopele of interest section", () => {
+        cy.get(".card").eq(0).get("button").contains("Add to People of Interest").click();
+        cy.get(".card").eq(1).get("button").contains("Add to People of Interest").click();
+        cy.get(".card").eq(2).get("button").contains("Add to People of Interest").click();
+        cy.get("button").contains("Actors").get("#dropdown-split-basic2").click().get(".dropdown-item").contains("Actors of Interest").click();
+        cy.wait(200)
+        cy.get(".badge").contains(3);
+        });
+    });
       
       });
