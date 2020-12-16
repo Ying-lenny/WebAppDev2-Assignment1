@@ -67,22 +67,27 @@ describe("Navigation", () => {
   it("should allow navigation from site header to all Actor related pages", () => {
     cy.get("button").contains("Actors").get("#dropdown-split-basic2").click().get(".dropdown-item").contains("Popular Actors").click();
     cy.url().should("include", `/popular`);
+    cy.wait(200)
     cy.get("h2").contains("Popular Actors");
 
     cy.get("button").contains("Actors").get("#dropdown-split-basic2").click().get(".dropdown-item").contains("Latest Actors").click();
     cy.url().should("include", `/latest`);
+    cy.wait(200)
     cy.get("h2").contains("Latest Actors");
 
     cy.get("button").contains("Actors").get("#dropdown-split-basic2").click().get(".dropdown-item").contains("Actors of Interest").click();
     cy.url().should("include", `/interest`);
+    cy.wait(200)
     cy.get("h2").contains("People of Interest");
 
     cy.get("button").contains("Actors").get("#dropdown-split-basic2").click().get(".dropdown-item").contains("Up and coming Actors").click();
     cy.url().should("include", `/newcomers`);
+    cy.wait(200)
     cy.get("h2").contains("Up and coming Actors");
 
     cy.get("button").contains("Movies").click();
     cy.url().should("not.include", `/popular`);
+    cy.wait(200)
     cy.get("h2").contains("Discover Movies");
   });
 });
