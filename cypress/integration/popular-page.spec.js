@@ -23,6 +23,7 @@ describe("Home Page ", () => {
     cy.visit("/")
     cy.wait(200)
     cy.get("button").contains("Actors").get("#dropdown-split-basic2").click().get(".dropdown-item").contains("Popular Actors").click();
+    cy.wait(200)
   });
   
     describe("Base test", () => {

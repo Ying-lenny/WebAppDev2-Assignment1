@@ -33,6 +33,7 @@ describe("Movie Details Page", () => {
     cy.visit(`/`);
     cy.wait(200)
     cy.get(".card").eq(2).find("img").click();
+    cy.wait(200)
   });
 
   it("should display movie title in the page header", () => {

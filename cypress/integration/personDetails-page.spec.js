@@ -33,7 +33,9 @@ describe("Actor Details Page", () => {
     cy.visit("/");
     cy.wait(200)
     cy.get("button").contains("Actors").get("#dropdown-split-basic2").click().get(".dropdown-item").contains("Popular Actors").click();
+    cy.wait(200)
     cy.get(".card").eq(4).find("img").click();
+    cy.wait(200)
   });
 
   it("should display actor's name in the page header", () => {

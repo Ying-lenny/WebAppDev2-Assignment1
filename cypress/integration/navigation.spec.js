@@ -107,6 +107,7 @@ describe("Navigation", () => {
     describe("From the Favorites page", () => {
         beforeEach(() => {
           cy.visit("/");
+          cy.wait(200)
           cy.get(".card").eq(0).find("button").click();
           cy.get("button").contains("Movies").get("#dropdown-split-basic").click().get(".dropdown-item").contains("Favorites").click();
         });
@@ -120,6 +121,7 @@ describe("Navigation", () => {
       describe("The Go Back button", () => {
         beforeEach(() => {
           cy.visit("/");
+          cy.wait(200)
         });
 
         it("should navigate from home page to movie details and back", () => {
