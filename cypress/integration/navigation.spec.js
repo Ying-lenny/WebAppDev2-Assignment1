@@ -35,6 +35,7 @@ describe("Navigation", () => {
 
     it("should navigate to the movie details page and change browser URL", () => {
       cy.get(".card").eq(1).find("img").click();
+      cy.wait(200)
       cy.url().should("include", `/movies/${movies[1].id}`);
       cy.get("h2").contains(movies[1].title);
     });
@@ -43,18 +44,22 @@ describe("Navigation", () => {
     it("should allow navigation from site header to all movie related pages", () => {
       cy.get("button").contains("Movies").get("#dropdown-split-basic").click().get(".dropdown-item").contains("Upcoming").click();
       cy.url().should("include", `/upcoming`);
+      cy.wait(200)
       cy.get("h2").contains("Upcoming Movies");
 
       cy.get("button").contains("Movies").get("#dropdown-split-basic").click().get(".dropdown-item").contains("Favorites").click();
       cy.url().should("include", `/favorites`);
+      cy.wait(200)
       cy.get("h2").contains("Favorite Movies");
 
       cy.get("button").contains("Movies").get("#dropdown-split-basic").click().get(".dropdown-item").contains("Wishlist").click();
       cy.url().should("include", `/wishlist`);
+      cy.wait(200)
       cy.get("h2").contains("Wishlisted Movies");
 
       cy.get("button").contains("Movies").click();
       cy.url().should("not.include", `/favorites`);
+      cy.wait(200)
       cy.get("h2").contains("Discover Movies");
     });
 
