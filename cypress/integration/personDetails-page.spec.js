@@ -31,6 +31,7 @@ describe("Actor Details Page", () => {
   });
   beforeEach(() => {
     cy.visit("/");
+    cy.wait(200)
     cy.get("button").contains("Actors").get("#dropdown-split-basic2").click().get(".dropdown-item").contains("Popular Actors").click();
     cy.get(".card").eq(4).find("img").click();
   });

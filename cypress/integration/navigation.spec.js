@@ -27,13 +27,10 @@ describe("Navigation", () => {
       });
   });
 
-  beforeEach(() => {
-    cy.visit("/");
-  });
-
   describe("From the home page", () => {
     beforeEach(() => {
       cy.visit("/");
+      cy.wait(200)
     });
 
     it("should navigate to the movie details page and change browser URL", () => {
@@ -88,6 +85,7 @@ describe("Navigation", () => {
   describe("From the Movie Details page ", () => {
     beforeEach(() => {
       cy.visit("/");
+      cy.wait(200)
       cy.get(".card").eq(1).find("img").click();
     });
 
