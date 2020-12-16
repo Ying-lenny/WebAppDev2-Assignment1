@@ -1,4 +1,4 @@
-.# Node docker image with Cypress and Chrome pre-installed
+# Node docker image with Cypress and Chrome pre-installed
 image: cypress/browsers:node12.0.0-chrome73
 
 # Pipeline
