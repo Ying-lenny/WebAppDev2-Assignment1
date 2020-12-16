@@ -34,9 +34,6 @@ describe("Home Page ", () => {
     describe("Filtering", () => {
         //Search Actor Names
         describe("By Actor Names" ,() => {
-          beforeEach(() => {
-            cy.visit("/person/popular")
-          });
           it("should display actors with 'p' in their name", () => {
             const searchString = 'p'
             const matchingActors = filterByName(popular, searchString );
