@@ -10,6 +10,7 @@ const reducer = (state, action) => {
         popular: state.popular.map((m) =>
           m.id === action.payload.person.id ? { ...m, interest: true } : m
         ),
+        latest: [...state.latest]
       };
 
       case "add-newcoming":
@@ -21,7 +22,7 @@ const reducer = (state, action) => {
       };
 
       case "load-popular":
-        return { popular: action.payload.popular, latest: [...state.latest] };
+        return { popular: action.payload.popular};
       case "load-latest":
         return { latest: action.payload.popular, popular: [...state.popular]};
       default:

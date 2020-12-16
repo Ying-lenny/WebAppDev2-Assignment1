@@ -42,6 +42,7 @@ describe("Navigation", () => {
       cy.get("h2").contains(movies[1].title);
     });
 
+    //Moves between movie pages
     it("should allow navigation from site header to all movie related pages", () => {
       cy.get("button").contains("Movies").get("#dropdown-split-basic").click().get(".dropdown-item").contains("Upcoming").click();
       cy.url().should("include", `/upcoming`);
@@ -60,6 +61,7 @@ describe("Navigation", () => {
       cy.get("h2").contains("Discover Movies");
     });
 
+  //Moves between all actor pages
   it("should allow navigation from site header to all Actor related pages", () => {
     cy.get("button").contains("Actors").get("#dropdown-split-basic2").click().get(".dropdown-item").contains("Popular Actors").click();
     cy.url().should("include", `/popular`);
