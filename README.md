@@ -52,17 +52,17 @@ Name: Owen Lenihan
 ...... Insert a list of the additional routes supported by your Movies Fan app. If relevant, specify which of the routes require authentication, i.e. protected/private.
 
 + /movies/favorites (protected) - displays the user's favorite movies selection.
-+ /movies/wishlist - displays the user's favorite movies selection.
-+ /person/interest - displays the user's favorite movies selection.
-+ /reviews/form - displays the user's favorite movies selection.
-+ /movies/upcoming - displays the user's favorite movies selection.
-+ /person/popular - displays the user's favorite movies selection.
-+ /person/latest - displays the user's favorite movies selection.
-+ /person/newcomers - displays the user's favorite movies selection.
++ /movies/wishlist - displays the user's wishlisted movies selection.
++ /person/interest - displays the user's People of Interest selection.
++ /reviews/form - displays the a form to add to movies selection.
++ /movies/upcoming - displays the upcoming movies selection.
++ /person/popular - displays the popular actors selection.
++ /person/latest - displays the latest actors selection.
++ /person/newcomers - displays the user's newcomers actors selection.
 + /reviews/:id (public) - displays the full text of a movie review.
-+ /movies/:id - displays the user's favorite movies selection.
-+ /person/:id - displays the user's favorite movies selection.
-+ /
++ /movies/:id - displays the details on a specific movie chosen.
++ /person/:id - displays the details on a specific actor chosen.
++ / Returns the user to the homepage
 
 ### Data hyperlinking.
 
@@ -76,13 +76,13 @@ Name: Owen Lenihan
 
 ## Independent learning (If relevant).
 
-. . . . . Briefly mention each technologies/techniques used in your project codebase that were not covered in the lectures/labs. Provide source code filename references to support your assertions and include reference material links (articles/blogs).
+Added a customer dropdown display menu system using react bootstrap. Link referenced below
 
 ---------------------------------
 
 # Assignment 1 - Agile Software Practice.
 
-Name: ... Owen Lenihan ...
+Name: Owen Lenihan 
 
 ## App Features.
 
