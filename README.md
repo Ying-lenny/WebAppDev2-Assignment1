@@ -1,6 +1,6 @@
 # Assignment 1 - ReactJS app.
 
-Name: ... your name ...
+Name: Owen Lenihan
 
 ## Features.
 
@@ -14,7 +14,8 @@ Name: ... your name ...
 
 ## Setup requirements (If required).
 
-...... A brief explanation of any non-standard setup steps necessary to run your app/client locally (after cloning the repo) ........
+ Below is the
+...... npm install react-bootstrap bootstrap ........
 
 ## API Data Model.
 
@@ -22,7 +23,11 @@ Name: ... your name ...
 
 + https://api.themoviedb.org/3/movie/${id} - get detailed information on a specific movie. 
 + https://api.themoviedb.org/3/genre/movie/list - get a list of movie genres
-+ .......
++ https://api.themoviedb.org/3/movie/${id}/reviews - get reviews for a specific movie
++ https://api.themoviedb.org/3/movie/upcoming - get a list of upcoming movies
++ https://api.themoviedb.org/3/person/popular - get a list of popular people
++ https://api.themoviedb.org/3/person/latest - get a lit of the latest people
++ https://api.themoviedb.org/3/person/${id} - get detailed information on a specific person
 
 ## App Design.
 
@@ -69,7 +74,7 @@ Name: ... your name ...
 
 # Assignment 1 - Agile Software Practice.
 
-Name: ... your name ...
+Name: ... Owen Lenihan ...
 
 ## App Features.
 
@@ -94,7 +99,7 @@ Tests: cypress/integration/movieReviewPage.spec.js
 
 ## Testing.
 
-Cypress Dashboard URL: ... your project's dashboard URL .....
+Cypress Dashboard URL: ... https://dashboard.cypress.io/projects/ew272a/runs?branches=%5B%5D&committers=%5B%5D&flaky=%5B%5D&page=1&status=%5B%5D&tags=%5B%5D&timeRange=%7B%22startDate%22%3A%221970-01-01%22%2C%22endDate%22%3A%222038-01-19%22%7D .....
 
 ### Advanced Testing (If required).
 
@@ -110,6 +115,9 @@ e.g.
 [ Itemize each technologies/techniques used in your project that were not covered in the lectures/labs. Provide the necessary evidence of their use (e,g, project file names, screenshots, service URL, etc)
 
 List reference material links (articles/blogs).
+
+Page used to create dropdown menu for site header
+https://react-bootstrap.github.io/components/dropdowns/?fbclid=IwAR2tgimOzUD9PDYMqmiTU-gbe4y8pcQoLqL_zmEi9PdGAiXsuzHJxVKtZ6Y#split-button-dropdowns
 
 ---------------------------------
 
