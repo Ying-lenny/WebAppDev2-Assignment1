@@ -72,9 +72,18 @@ Name: Owen Lenihan
 > Clicking a card causes the display of that movie's details.
 
 ![][reviewLink]
->Clicking the 'Full Review' for a review extract will display the full text of the review
+> Clicking the 'Full Review' for a review extract will display the full text of the review
 
-## Independent learning (If relevant).
+![][peopleCardLink]
+> Clicking a card causes the display of that actor's details.
+
+![][peopleMenuLink]
+> Clicking a link on the meny causes changes the page to display that list of actors.
+
+![][movieMenuLink]
+> Clicking a link on the meny causes changes the page to display that list of movies.
+
+## Independent learning.
 
 Added a customer dropdown display menu system using react bootstrap. Link referenced below
 
@@ -128,7 +137,7 @@ Tests: cypress/integration/navigation.spec.js
 
 Tests: cypress/integration/personDetails-page.spec.js
 
-![][peopleDetail]
+![][personDetail]
 
 
 + Popular Person Page: Shows a list of popular people and a button to add them to another page called People of Interest.
@@ -188,4 +197,6 @@ https://react-bootstrap.github.io/components/dropdowns/?fbclid=IwAR2tgimOzUD9PDY
 [CodeBundling]: ./public/codeBundling.png
 [cypressDashboard]: ./public/cypressDashboard.png
 [cypressPipeline]: ./public/cypressPipeline.png
-
+[peopleCardLink]: ./public/peopleCardLink.png
+[peopleMenuLink]: ./public/peopleMenuLink.png
+[movieMenuLink]: ./public/movieMenuLink.png
