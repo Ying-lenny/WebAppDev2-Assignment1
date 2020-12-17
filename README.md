@@ -175,7 +175,7 @@ https://react-bootstrap.github.io/components/dropdowns/?fbclid=IwAR2tgimOzUD9PDY
 [interestPage]: ./public/interestPersonPage.png
 [movieDetail]: ./public/movieDetail.png
 [navigation]: ./public/navigation.png
-[peopleDetail]: ./public/peopleDetail.png
+[personDetail]: ./public/personDetail.png
 [popularPage]: ./public/popularPersonPage.png
 [review]: ./public/review.png
 [reviewLink]: ./public/reviewlink.png
@@ -185,7 +185,7 @@ https://react-bootstrap.github.io/components/dropdowns/?fbclid=IwAR2tgimOzUD9PDY
 [interestPage]: ./public/interestPersonPage.png
 [cardLink]: ./public/cardlink.png
 [wishlistPage]: ./public/wishlistMoviePage.png
-[CodeBundling]: ./public/codeBuilding.png
+[CodeBundling]: ./public/codeBundling.png
 [cypressDashboard]: ./public/cypressDashboard.png
 [cypressPipeline]: ./public/cypressPipeline.png
 
