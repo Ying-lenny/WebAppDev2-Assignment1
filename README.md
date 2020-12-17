@@ -14,7 +14,7 @@ Name: Owen Lenihan
 
 ## Setup requirements (If required).
 
- Below is the
+ Below is the line you need to run in the intergrated terminal to view the dropdown menu
 ...... npm install react-bootstrap bootstrap ........
 
 ## API Data Model.
@@ -33,9 +33,7 @@ Name: Owen Lenihan
 
 ### Component catalogue (If required).
 
-....... Insert a screenshot from the Storybook UI, hi-light stories relating to new/modified components you developed - see example screenshot below] .......
-
-![][stories]
+....... Updated Storybook view .......
 
 ![][storiesUpdated]
 
@@ -82,36 +80,54 @@ Name: ... Owen Lenihan ...
 
 [Document each new feature/page in your Movies Fan app, including: Feature Name; Its objective/purpose; The associated test file; a screenshot of its UI.]
 e,g,
+
++ Homepage: Shows a collection of movies with dropdown menus leading to movie and actor releated pages.
+
+Tests: cypress/integration/home-page.spec.js
+
+![][homepage]
+
  
 + Movie Details page - Shows the details about a movie. The Show reviews button reveals an excerpt for each critic review of the movie.
 
 Tests: cypress/integration/movieDetails.spec.js 
 
+
 ![][movieDetail]
 
 + Movie Review page: Displays the full text of a movie review.
 
-Tests: cypress/integration/home-page.spec.js
-Tests: cypress/integration/navigation.spec.js
-Tests: cypress/integration/personDetails-page.spec.js
-Tests: cypress/integration/popular-page.spec.js
-Tests: cypress/integration/upcoming-page.spec.js
-
 ![][review]
 
-![][homepage]
-![][interestPage]
+
++ Navigation: Move between pages using a custom dropdown menu using bootstrap.
+
+Tests: cypress/integration/navigation.spec.js
+
 ![][navigation]
+
+
++ Person Detail Page: Shows the details about a movie.
+
+Tests: cypress/integration/personDetails-page.spec.js
+
 ![][peopleDetail]
+
+
++ Popular Person Page: Shows a list of popular people and a button to add them to another page called People of Interest.
+
+Tests: cypress/integration/popular-page.spec.js
+
 ![][popularPage]
-![][stories]
-![][storiesUpdated]
-![][upcomingList]
+
 ![][interestPage]
 
-+ etc
 
-+ etc
++ Popular Person Page: Shows a list of popular people and a button to add them to another page called People of Interest.
+
+Tests: cypress/integration/upcoming-page.spec.js
+
+![][upcomingList]
 
 ## Testing.
 
