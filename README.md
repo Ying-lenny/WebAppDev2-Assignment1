@@ -41,11 +41,38 @@ Name: Owen Lenihan
 
 ...... Insert screenshots of the new/modified views you have added to the Movies Fan app. Include a caption for each one clearly stating its purpose and any user interaction it supports ........
 
+![][homepage]
+> > Shows page with a list of movies marked as discover. Clicking on a card will take you to that movie's details. Has a button on each card which add the movie to a separate page that tracks favorite movies
+
+![][favoritePage]
+> Shows page with a list of movies added from the wishlist movies page. Clicking on a card will take you to that movie's details
+
 ![][movieDetail]
->Shows detailed information on a movie. Clicking the 'Show Reviews' button will display extracts from critic reviews.
+> Shows detailed information on a movie. Clicking the 'Show Reviews' button will display extracts from critic reviews.
 
 ![][review]
->Shows the full text for a movie review. 
+> Shows the full text for a movie review. 
+
+![][upcomingList]
+> Shows page with a list of movies which are coming out soon. Clicking on a card will take you to that movie's details. Has a button on each card which add the movie to a wishlist
+
+![][wishlistPage]
+> Shows page with a list of movies added from the wishlist movies page. Clicking on a card will take you to that movie's details
+
+![][popularPage]
+> Shows page with a list of popular actors. Clicking on a card will take you to that actor's details. Has a button on each card which add the actor to a person of interest page
+
+![][personDetail]
+> Shows detailed information on a person.
+
+![][interestPage]
+> Shows page with a list of actors added from the popular actors page. Clicking on a card will take you to that actor's details
+
+![][personLatest]
+> This was meant to show a page with a list of the latest actors. However I couldn't get the list to display so this page is empty
+
+![][personUpcoming]
+> Would've shown a page with a list of actors added from the latest actors page. Clicking on a card would've taken you to that actor's details. No actors to add from the latest actors page
 
 ## Routing.
 
@@ -200,3 +227,6 @@ https://react-bootstrap.github.io/components/dropdowns/?fbclid=IwAR2tgimOzUD9PDY
 [peopleCardLink]: ./public/peopleCardLink.png
 [peopleMenuLink]: ./public/peopleMenuLink.png
 [movieMenuLink]: ./public/movieMenuLink.png
+[favoritePage]: ./public/favoriteMoviePage.png
+[personLatest]: ./public/personLatestPage.png
+[personUpcoming]: ./public/personUpcomingPage.png
