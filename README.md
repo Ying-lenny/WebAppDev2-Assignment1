@@ -228,5 +228,5 @@ https://react-bootstrap.github.io/components/dropdowns/?fbclid=IwAR2tgimOzUD9PDY
 [peopleMenuLink]: ./public/peopleMenuLink.png
 [movieMenuLink]: ./public/movieMenuLink.png
 [favoritePage]: ./public/favoriteMoviePage.png
-[personLatest]: ./public/personLatestPage.png
-[personUpcoming]: ./public/personUpcomingPage.png
+[personLatest]: ./public/latestPersonPage.png
+[personNewcoming]: ./public/personNewcomingPage.png
