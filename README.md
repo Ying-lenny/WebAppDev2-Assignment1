@@ -6,15 +6,15 @@ Name: Owen Lenihan
 
 ...... A bullet-point list of the ADDITIONAL user features you have implemented for the  Movies Fan app ......,
  
- + Feature 1 - .... a statement of its purpose/objective ..... 
- + Feature 2 - .......
- + Feature 3 = ......
- + etc
- + etc
+ + Feature 1 - Added upcoming movies and wishlist pages to track movies that are coming out soon and add them to a wishlist 
+ + Feature 2 - .Added popular person and person of interest pages to track Actors that are popular and add them to a page tracking people of interest
+ + Feature 3 - Added latest person and newcomers pages which were intended to track the latest people created on IMDB but I couldn't get the page to work in time so I cannot confirm any details on the page's status.
++ Feature 4 - Replaced the original menu on the site with a new dropdown menu using react bootstrap, referenced below in references
 
 ## Setup requirements (If required).
 
  Below is the line you need to run in the intergrated terminal to view the dropdown menu
+
 ...... npm install react-bootstrap bootstrap ........
 
 ## API Data Model.
