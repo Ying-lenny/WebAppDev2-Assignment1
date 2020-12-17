@@ -42,7 +42,7 @@ Name: Owen Lenihan
 ...... Insert screenshots of the new/modified views you have added to the Movies Fan app. Include a caption for each one clearly stating its purpose and any user interaction it supports ........
 
 ![][homepage]
-> > Shows page with a list of movies marked as discover. Clicking on a card will take you to that movie's details. Has a button on each card which add the movie to a separate page that tracks favorite movies
+> Shows page with a list of movies marked as discover. Clicking on a card will take you to that movie's details. Has a button on each card which add the movie to a separate page that tracks favorite movies
 
 ![][favoritePage]
 > Shows page with a list of movies added from the wishlist movies page. Clicking on a card will take you to that movie's details
