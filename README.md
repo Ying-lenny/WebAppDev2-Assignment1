@@ -91,9 +91,23 @@ Tests: cypress/integration/movieDetails.spec.js
 
 + Movie Review page: Displays the full text of a movie review.
 
-Tests: cypress/integration/movieReviewPage.spec.js 
+Tests: cypress/integration/home-page.spec.js
+Tests: cypress/integration/navigation.spec.js
+Tests: cypress/integration/personDetails-page.spec.js
+Tests: cypress/integration/popular-page.spec.js
+Tests: cypress/integration/upcoming-page.spec.js
 
 ![][review]
+
+![][homepage]
+![][interestPage]
+![][navigation]
+![][peopleDetail]
+![][popularPage]
+![][stories]
+![][storiesUpdated]
+![][upcomingList]
+![][interestPage]
 
 + etc
 
@@ -122,11 +136,18 @@ Page used to create dropdown menu for site header
 https://react-bootstrap.github.io/components/dropdowns/?fbclid=IwAR2tgimOzUD9PDYMqmiTU-gbe4y8pcQoLqL_zmEi9PdGAiXsuzHJxVKtZ6Y#split-button-dropdowns
 
 ---------------------------------
-
+[homepage]: ./public/homepage.png
+[interestPage]: ./public/interestPersonPage.png
 [movieDetail]: ./public/movieDetail.png
+[navigation]: ./public/navigation.png
+[peopleDetail]: ./public/peopleDetail.png
+[popularPage]: ./public/popularPersonPage.png
 [review]: ./public/review.png
 [reviewLink]: ./public/reviewLink.png
-[cardLink]: ./public/cardLink.png
 [stories]: ./public/storybook.png
-[storiesUpdated]: ./public/storybookUpdated.png
+[storiesUpdated]: ./public/StorybookUpdated.png
+[upcomingList]: ./public/upcomingMoviePage.png
+[interestPage]: ./public/interestPersonPage.png
+[cardLink]: ./public/cardLink.png
+[wishlistPage]: ./public/wishlistMoviePage.png
 
