@@ -31,7 +31,7 @@ Name: Owen Lenihan
 
 ## App Design.
 
-### Component catalogue (If required).
+### Component catalogue
 
 ....... Updated Storybook view .......
 
@@ -52,9 +52,17 @@ Name: Owen Lenihan
 ...... Insert a list of the additional routes supported by your Movies Fan app. If relevant, specify which of the routes require authentication, i.e. protected/private.
 
 + /movies/favorites (protected) - displays the user's favorite movies selection.
++ /movies/wishlist - displays the user's favorite movies selection.
++ /person/interest - displays the user's favorite movies selection.
++ /reviews/form - displays the user's favorite movies selection.
++ /movies/upcoming - displays the user's favorite movies selection.
++ /person/popular - displays the user's favorite movies selection.
++ /person/latest - displays the user's favorite movies selection.
++ /person/newcomers - displays the user's favorite movies selection.
 + /reviews/:id (public) - displays the full text of a movie review.
-+ etc.
-+ etc.
++ /movies/:id - displays the user's favorite movies selection.
++ /person/:id - displays the user's favorite movies selection.
++ /
 
 ### Data hyperlinking.
 
@@ -123,11 +131,13 @@ Tests: cypress/integration/popular-page.spec.js
 ![][interestPage]
 
 
-+ Popular Person Page: Shows a list of popular people and a button to add them to another page called People of Interest.
++ Upcoming Page: Shows a list of upcoming movies and a button to add them to another page called Wishlisted Movies.
 
 Tests: cypress/integration/upcoming-page.spec.js
 
 ![][upcomingList]
+
+![][wishlistPage]
 
 ## Testing.
 
@@ -159,11 +169,11 @@ https://react-bootstrap.github.io/components/dropdowns/?fbclid=IwAR2tgimOzUD9PDY
 [peopleDetail]: ./public/peopleDetail.png
 [popularPage]: ./public/popularPersonPage.png
 [review]: ./public/review.png
-[reviewLink]: ./public/reviewLink.png
+[reviewLink]: ./public/reviewlink.png
 [stories]: ./public/storybook.png
 [storiesUpdated]: ./public/StorybookUpdated.png
 [upcomingList]: ./public/upcomingMoviePage.png
 [interestPage]: ./public/interestPersonPage.png
-[cardLink]: ./public/cardLink.png
+[cardLink]: ./public/cardlink.png
 [wishlistPage]: ./public/wishlistMoviePage.png
 
