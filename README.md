@@ -37,6 +37,8 @@ Name: Owen Lenihan
 
 ![][stories]
 
+![][storiesUpdated]
+
 ### UI Design.
 
 ...... Insert screenshots of the new/modified views you have added to the Movies Fan app. Include a caption for each one clearly stating its purpose and any user interaction it supports ........
@@ -126,3 +128,5 @@ https://react-bootstrap.github.io/components/dropdowns/?fbclid=IwAR2tgimOzUD9PDY
 [reviewLink]: ./public/reviewLink.png
 [cardLink]: ./public/cardLink.png
 [stories]: ./public/storybook.png
+[storiesUpdated]: ./public/storybookUpdated.png
+
