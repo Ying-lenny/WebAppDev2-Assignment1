@@ -86,8 +86,17 @@ Name: Owen Lenihan
 
 ## App Features.
 
-[Document each new feature/page in your Movies Fan app, including: Feature Name; Its objective/purpose; The associated test file; a screenshot of its UI.]
-e,g,
++ Feature 1 - Reworked and created various E2E tests to test various aspects of the site such as navigation and actor name searching with proper test documentation
++ Feature 2 - Added Continuous Intergrations features by connecting the project to gitlabs to test the cypress tests online and linked to a cypress dashboard to view recording
+
+![][cypressDashboard]
+
+![][cypressPipeline]
+
+
++ Feature 3 - Added code bundling to ease burden on app as parts of the site are loaded as they are required instead of all at once
+
+![][CodeBundling]
 
 + Homepage: Shows a collection of movies with dropdown menus leading to movie and actor releated pages.
 
@@ -176,4 +185,7 @@ https://react-bootstrap.github.io/components/dropdowns/?fbclid=IwAR2tgimOzUD9PDY
 [interestPage]: ./public/interestPersonPage.png
 [cardLink]: ./public/cardlink.png
 [wishlistPage]: ./public/wishlistMoviePage.png
+[CodeBundling]: ./public/codeBuilding.png
+[cypressDashboard]: ./public/cypressDashboard.png
+[cypressPipeline]: ./public/cypressPipeline.png
 
